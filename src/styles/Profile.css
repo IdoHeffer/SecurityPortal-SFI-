@@ -1,5 +1,23 @@
-/* src/styles/Profile.css */
-.profile {
-    padding: 20px;
-  }
-  
+.container {
+  text-align: center;
+}
+
+.profile-photo img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  height: 20px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #28a745; /* Green progress bar */
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}

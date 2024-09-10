@@ -1,5 +1,3 @@
-// src/App.tsx
-
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Badge from './components/Badge';
@@ -28,7 +26,6 @@ const App: React.FC = () => {
     // Add more tasks here
   ]);
 
-  // This could be replaced with real data fetching logic
   useEffect(() => {
     // Fetch developer data and tasks from API
   }, []);
@@ -42,7 +39,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/tasks" element={<Tasks/>} />
-            <Route path="/profile" element={<Profile/>} />
+            {/* Pass developer as prop to Profile */}
+            <Route path="/profile" element={<Profile developer={developer} />} />
             <Route path="/backlog" element={<Backlog/>} />
           </Routes>  
       </div>
