@@ -1,0 +1,33 @@
+/* src/styles/Badge.css */
+.badge {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .badge h3 {
+    margin: 0;
+  }
+  
+  .badge p {
+    margin: 5px 0;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: lightgreen;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-inner {
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+  }
+  
