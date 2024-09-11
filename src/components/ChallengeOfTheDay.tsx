@@ -19,7 +19,14 @@ const ChallengeOfTheDay: React.FC = () => {
     <div className="challenge-container">
       <h1>Challenge of the Day</h1>
       <p>Your task is to find and replace the secret in the code below. Good luck!</p>
+      <br></br>
+      <br></br>
       <div className="vscode-editor">
+        <div className="window-buttons">
+          <div className="window-button"></div>
+          <div className="window-button yellow"></div>
+          <div className="window-button green"></div>
+        </div>
         <pre>
           <code>
             {code}
@@ -27,7 +34,6 @@ const ChallengeOfTheDay: React.FC = () => {
         </pre>
       </div>
     </div>
-
   );
 };
 

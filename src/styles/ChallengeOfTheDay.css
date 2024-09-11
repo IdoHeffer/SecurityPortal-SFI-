@@ -59,7 +59,7 @@
     content: "index.js";
     position: absolute;
     top: -25px;
-    left: 15px;
+    left: 55px;
     font-size: 12px;
     color: #fff;
     background-color: #007acc;
@@ -81,7 +81,7 @@
   /* MacOS Window Buttons */
   .window-buttons {
     position: absolute;
-    top: -32px;
+    top: -30px;
     left: 15px;
     display: flex;
     align-items: center;
