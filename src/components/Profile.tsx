@@ -23,7 +23,7 @@ const Profile: React.FC<ProfileProps> = ({ developer }) => {
     {
       title: 'Azure Defender',
       description: 'Secured all critical Azure resources. Nothing escapes your watchful eye!',
-      icon: process.env.PUBLIC_URL + '/img/AzureDefender.jpeg'
+      icon: process.env.PUBLIC_URL + '/img/AzureDefender2.jpg'
     },
   ];
 
