@@ -18,7 +18,7 @@ const Home: React.FC<ProfileProps> = ({ developer, tasks }) => {
   return (
     <div className="container mt-4">
       <h1 className="mb-4">Welcome to the Security Awareness Platform</h1>
-      <p>This is the home page. Use the navigation bar to explore other sections.</p>
+      <p>Here is a brief about current status</p>
       
       <ProgressOverview developer={developer} />
       <RecentAchievements />

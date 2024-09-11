@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Tasks from './components/Tasks';
 import Profile from './components/Profile';
 import Backlog from './components/Backlog';
+import Performance from './components/Performance';
 import './styles/variables.css';
 import './styles/Navbar.css';
 import './styles/Badge.css';
@@ -42,6 +43,7 @@ const App: React.FC = () => {
             {/* Pass developer as prop to Profile */}
             <Route path="/profile" element={<Profile developer={developer} />} />
             <Route path="/backlog" element={<Backlog/>} />
+            <Route path="/performance" element={<Performance developer={developer}/>} />
           </Routes>  
       </div>
     </Router>
