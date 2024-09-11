@@ -3,18 +3,18 @@ import ProgressOverview from './ProgressOverview';
 import RecentAchievements from './RecentAchievements';
 import TopSecurityTasks from './TopSecurityTasks';
 import { Developer } from '../types';
-import { Task } from '../types';
+import { Challenge } from '../types';
 
 interface ProfileProps {
   developer: Developer;
 }
 interface ProfileProps {
-  tasks: Task[];
+  challenges: Challenge[];
 }
 
 
 
-const Home: React.FC<ProfileProps> = ({ developer, tasks }) => {
+const Home: React.FC<ProfileProps> = ({ developer, challenges }) => {
   return (
     <div className="container mt-4">
       <h1 className="mb-4">Welcome to the Security Awareness Platform</h1>
@@ -22,7 +22,7 @@ const Home: React.FC<ProfileProps> = ({ developer, tasks }) => {
       
       <ProgressOverview developer={developer} />
       <RecentAchievements />
-      <TopSecurityTasks tasks={tasks} />
+      <TopSecurityTasks challenges={challenges} />
     </div>
   );
 };

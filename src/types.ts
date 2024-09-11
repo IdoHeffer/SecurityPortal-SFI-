@@ -1,6 +1,6 @@
 // src/types.ts
 
-export interface Task {
+export interface Challenge {
     id: number;
     name: string;
     impact: number;

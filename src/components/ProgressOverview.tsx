@@ -10,14 +10,14 @@ interface ProgressOverviewProps {
 const ProgressOverview: React.FC<ProgressOverviewProps> = ({ developer }) => {
   // Example data for the bar chart
   const data = [
-    { name: 'last month completed tasks', value: developer.progress },
-    { name: 'current month completed tasks', value: 100 - developer.progress },
+    { name: 'last month completed challenges', value: developer.progress },
+    { name: 'current month completed challenges', value: 100 - developer.progress },
     { name: 'Future projection', value: 65 }
   ];
 
   return (
     <div className="progress-overview mb-4">
-      <h2>Completed tasks Overview</h2>
+      <h2>Completed challenges Overview</h2>
       <BarChart
         width={900}
         height={300}

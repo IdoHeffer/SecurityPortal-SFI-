@@ -1,24 +1,24 @@
 import React from 'react';
-import { Task } from '../types';
+import { Challenge } from '../types';
 import { bottom } from '@popperjs/core';
 import '../styles/TopSecurityTasks.css';
 
 interface ProfileProps {
-    tasks: Task[];
+    challenges: Challenge[];
 }
 
-const TopSecurityTasks: React.FC<ProfileProps> = ({tasks}) => {
+const TopSecurityTasks: React.FC<ProfileProps> = ({challenges}) => {
   return (
     <div className="top-security-tasks mb-6">
-      <h2>Top Security Tasks</h2>
+      <h2>Top Security Challenges</h2>
       <ul className="list-group">
-        {tasks.map(task => (
-          <li key={task.id} className="list-group-item d-flex align-items-center justify-content-between">
+        {challenges.map(challenge => (
+          <li key={challenge.id} className="list-group-item d-flex align-items-center justify-content-between">
             <div className="task-info d-flex align-items-center">
-              <span className="task-name">{task.name}</span>
+              <span className="task-name">{challenge.name}</span>
             </div>
             <div className="task-score">
-              <span className="badge-primary">{task.rank}</span> {/* Task rank (score) */}
+              <span className="badge-primary">{challenge.rank}</span> {/* Task rank (score) */}
             </div>
           </li>
         ))}

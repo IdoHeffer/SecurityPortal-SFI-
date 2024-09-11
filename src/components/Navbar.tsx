@@ -37,6 +37,11 @@ const Navbar: React.FC = () => {
               <i className="bi bi-bar-chart"></i> Performance
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/challengeOfTheDay">
+              <i className="bi bi-bar-chart"></i> Challenge Of The Day
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
