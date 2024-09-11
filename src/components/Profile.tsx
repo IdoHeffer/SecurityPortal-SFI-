@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Badge from './Badge';
+import Modal from './Modal'; // Import the Modal
 import { Developer } from '../types';
 import '../styles/Profile.css';
 
@@ -12,19 +13,27 @@ const Profile: React.FC<ProfileProps> = ({ developer }) => {
     {
       title: 'Storage Accounts Master',
       description: 'You have unlocked the hidden potential of Azure Storage Accounts. No secret stays hidden!',
-      iconSrc: process.env.PUBLIC_URL + '/img/Storage_Accounts_Master_badge.jpg' // Corrected image path
+      iconSrc: process.env.PUBLIC_URL + '/img/Storage_Accounts_Master_badge.jpg'
     },
     {
       title: 'VM Guardian',
       description: 'Protected and secured all virtual machines from malicious threats like a true knight!',
-      icon: 'fas fa-shield-alt'
+      icon: process.env.PUBLIC_URL + '/img/Vm Gurdian.jpeg'
     },
     {
       title: 'Azure Defender',
       description: 'Secured all critical Azure resources. Nothing escapes your watchful eye!',
-      icon: 'fas fa-lock'
+      icon: process.env.PUBLIC_URL + '/img/AzureDefender.jpeg'
     },
   ];
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedAchievement, setSelectedAchievement] = useState<any>(null);
+
+  const handleAchievementClick = (achievement: any) => {
+    setSelectedAchievement(achievement);
+    setShowModal(true);
+  };
 
   return (
     <div className="container mt-4 text-center">
@@ -60,7 +69,12 @@ const Profile: React.FC<ProfileProps> = ({ developer }) => {
         <h2>Skills & Achievements</h2>
         <div className="achievement-list mt-4">
           {achievements.map((achievement, index) => (
-            <div key={index} className="achievement-item d-flex align-items-center mb-3">
+            <div
+              key={index}
+              className="achievement-item d-flex align-items-center mb-3"
+              onClick={() => handleAchievementClick(achievement)} // Handle click event
+              style={{ cursor: 'pointer' }} // Add pointer cursor for indication
+            >
               {achievement.iconSrc ? (
                 <img
                   src={achievement.iconSrc}
@@ -78,6 +92,13 @@ const Profile: React.FC<ProfileProps> = ({ developer }) => {
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        achievement={selectedAchievement}
+      />
     </div>
   );
 };
