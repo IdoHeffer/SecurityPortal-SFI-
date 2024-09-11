@@ -18,7 +18,7 @@ import './styles/Backlog.css';
 import { Developer, Task } from './types';
 
 const App: React.FC = () => {
-  const [developer, setDeveloper] = useState<Developer>({ name: 'Ido Heffer', rank: 15, progress: 35 });
+  const [developer, setDeveloper] = useState<Developer>({ name: 'Ido Heffer', rank: 15, progress: 45 });
   const [tasks, setTasks] = useState<Task[]>([
     { id: 1, name: 'Remove secret from code', impact: 3, urgency: 2, volume: 5, rank: 6 },
     { id: 2, name: 'Disable Local Authentication for Storage accounts', impact: 3, urgency: 2, volume: 5, rank: 1 },
@@ -37,7 +37,7 @@ const App: React.FC = () => {
       <Sidebar tasks={tasks} />
       <div style={{ marginLeft: 250, padding: 20 }}>
           <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={<Home developer={developer} tasks={tasks}/>} />
             <Route path="/tasks" element={<Tasks/>} />
             {/* Pass developer as prop to Profile */}
             <Route path="/profile" element={<Profile developer={developer} />} />
