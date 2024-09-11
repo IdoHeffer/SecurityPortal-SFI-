@@ -18,12 +18,12 @@ const Profile: React.FC<ProfileProps> = ({ developer }) => {
     {
       title: 'VM Guardian',
       description: 'Protected and secured all virtual machines from malicious threats like a true knight!',
-      icon: process.env.PUBLIC_URL + '/img/Vm Gurdian.jpeg'
+      iconSrc: process.env.PUBLIC_URL + '/img/Vm Gurdian.jpeg'
     },
     {
       title: 'Azure Defender',
       description: 'Secured all critical Azure resources. Nothing escapes your watchful eye!',
-      icon: process.env.PUBLIC_URL + '/img/AzureDefender2.jpg'
+      iconSrc: process.env.PUBLIC_URL + '/img/Azuredefender3.jpeg'
     },
   ];
 
@@ -41,7 +41,7 @@ const Profile: React.FC<ProfileProps> = ({ developer }) => {
       
       <div className="profile-photo mb-4">
         <img
-          src="https://via.placeholder.com/150"
+          src="/img/developerUser.jpeg"
           alt={`${developer.name}'s profile`}
           className="rounded-circle"
           width="150"
@@ -82,7 +82,7 @@ const Profile: React.FC<ProfileProps> = ({ developer }) => {
                   className="achievement-icon-left"
                 />
               ) : (
-                <i className={`${achievement.icon} achievement-icon`} style={{ fontSize: '24px' }}></i>
+                <i className={`${achievement.iconSrc} achievement-icon`} style={{ fontSize: '24px' }}></i>
               )}
               <div className="achievement-content">
                 <h5>{achievement.title}</h5>
