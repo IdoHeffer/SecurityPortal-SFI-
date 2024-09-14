@@ -1,0 +1,63 @@
+.container {
+  text-align: center;
+}
+
+.profile-photo img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  height: 20px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #28a745;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.achievements {
+  margin-top: 3rem;
+}
+
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  text-align: left;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-icon-left {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.achievement-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-item h5 {
+  margin: 0;
+}
+
+.achievement-item p {
+  margin: 0;
+}

@@ -1,0 +1,21 @@
+/* src/styles/variables.css */
+:root {
+    --primary-color: #003366; /* Dark Blue */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #4caf50; /* Green for progress bars */
+    --border-color: #ddd;
+    --text-color: #333;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+/* src/styles/variables.css */
+.main-content {
+    margin-left: 250px; /* Adjust based on sidebar width */
+    padding: 20px;
+  }
+  
